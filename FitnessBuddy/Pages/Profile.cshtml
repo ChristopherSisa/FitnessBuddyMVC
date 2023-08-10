@@ -1,0 +1,117 @@
+﻿@page
+@model FitnessBuddy.Pages.ProfileModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Profile - FitnessBuddy</title>
+    <style>
+        body {
+            background-color: #f4f6f8;
+            font-family: 'Arial', sans-serif;
+        }
+        .profile-container {
+            padding: 30px;
+        }
+        .profile-pic {
+            max-width: 120px;
+            border-radius: 50%;
+        }
+        .profile-header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .sports-section {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .sport-item {
+            padding: 20px;
+            background-color: #f2f2f2;
+            color: #333;
+            border-radius: 20px;
+            margin: 10px;
+            text-align: center;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+        }
+        .sport-item:hover {
+            background-color: #d1d1d1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .event-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .event-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .event-details {
+            flex-grow: 1;
+        }
+        .event-actions button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container profile-container">
+        <div class="row">
+            <div class="col-md-12 profile-header">
+                <img src="path/to/your/profile-picture.jpg" alt="Profile Picture" class="profile-pic">
+                <h3>Your Name</h3>
+            </div>
+            <div class="col-md-12 mt-4">
+                <h3>Down to Play</h3>
+                <div class="sports-section">
+                    <div class="sport-item">Jujitzu</div>
+                    <div class="sport-item">Wrestling</div>
+                    <div class="sport-item">Baseball</div>
+                    <!-- More sports here -->
+                </div>
+                <h3 class="mt-4">Upcoming Events</h3>
+                <div class="event-card">
+                    <img src="path/to/event-image.jpg" alt="Event Image" class="event-image">
+                    <div class="event-details">
+                        <h5>Sport Name</h5>
+                        <p>Sport Description</p>
+                        <p>Time: 5:00 PM</p>
+                        <p>People Limit: 10</p>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn btn-primary">Join</button>
+                        <button class="btn btn-secondary">Share</button>
+                        <button class="btn btn-success">Comment</button>
+                    </div>
+                </div>
+                <!-- Add more event cards here -->
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@(Html.Raw("popperjs"))/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

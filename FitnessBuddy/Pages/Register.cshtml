@@ -1,0 +1,89 @@
+﻿@page
+@model FitnessBuddy.Pages.Index2Model
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Register - FitnessBuddy</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #83a4d4, #b6fbff); /* Gradient background */
+            height: 100vh;
+        }
+        .register-container {
+            max-width: 1000px;
+            margin: 5% auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .left-section {
+            padding: 30px;
+            color: #333;
+        }
+        .left-section h3 {
+            font-weight: bold;
+        }
+        .left-section p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container register-container">
+        <div class="row">
+            <div class="col-md-6 left-section">
+                <h3>Welcome to FitnessBuddy!</h3>
+                <p>Join the community of sports enthusiasts and find friends to play your favorite games. Connect, compete, and celebrate the joy of sports with FitnessBuddy.</p>
+            </div>
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Join Now</h2>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="FirstName">First Name</label>
+                        <input type="text" class="form-control" id="FirstName" name="FirstName" placeholder="First Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="LastName">Last Name</label>
+                        <input type="text" class="form-control" id="LastName" name="LastName" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Username">Username</label>
+                        <input type="text" class="form-control" id="Username" name="Username" placeholder="Username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Email">Email address</label>
+                        <input type="email" class="form-control" id="Email" name="Email" placeholder="Enter email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="DateOfBirth">Date of Birth</label>
+                        <input type="date" class="form-control" id="DateOfBirth" name="DateOfBirth" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="Password">Password</label>
+                        <input type="password" class="form-control" id="Password" name="Password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="ConfirmPassword">Confirm Password</label>
+                        <input type="password" class="form-control" id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
+                </form>
+                <p class="text-center mt-3">
+                    Already have an account? <a href="@Url.Page("Login")">Login here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@(Html.Raw("popperjs"))/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
